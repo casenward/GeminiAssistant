@@ -1,0 +1,7 @@
+# Ignore environment files (API keys, secrets)
+.env
+
+# Ignore Python cache and temp files
+__pycache__/
+*.pyc
+*.pyo
