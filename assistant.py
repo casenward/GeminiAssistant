@@ -16,7 +16,6 @@ user_location = None
 
 
 def gemini_respond(prompt: str) -> str:
-    """Call Gemini with safe handling."""
     try:
         resp = client.models.generate_content(
             model="gemini-2.5-flash",
@@ -106,7 +105,6 @@ def analyze_image(image_path: str) -> None:
 
 
 def describe_image_prompt(prompt: str) -> str:
-    """Instead of generating an image, describe the image the user imagined."""
     return gemini_respond(
         f"Describe in vivid detail what an image like this WOULD look like: {prompt}"
     )
